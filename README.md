@@ -60,7 +60,7 @@ O código foi dividido em funções responsáveis por tarefas específicas:
 
 - Complexidade espacial: **O(n)**
 
-**Observação**: A análise detalhada das complexidades temporal e espacial encontra-se documentada em um arquivo complementar disponível neste repositório.
+**Observação**: A análise detalhada das complexidades temporal e espacial encontra-se disponível em [Análise de Complexidade](docs/Análise_de_Complexidade.pdf).
 
 ## Aprendizados
 
