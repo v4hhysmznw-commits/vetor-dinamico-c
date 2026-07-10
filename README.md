@@ -6,7 +6,12 @@ Implementação de um vetor dinâmico em C utilizando alocação dinâmica de me
 
 Este projeto foi desenvolvido como exercício prático durante meus estudos da linguagem C e de estruturas de dados.
 
-O objetivo foi implementar um vetor capaz de crescer dinamicamente conforme novos elementos são inseridos, utillizando `malloc` e `realloc`, além de praticar modularização, ponteiros e tratamento de erros.
+Sua finalidade foi implementar um vetor capaz de crescer dinamicamente conforme novos elementos são inseridos, utilizando `malloc` e `realloc`, além de praticar modularização, ponteiros e tratamento de erros.
+
+## Tecnologias
+
+- Linguagem C
+- GCC
 
 ## Funcionalidades
 
@@ -24,7 +29,7 @@ O objetivo foi implementar um vetor capaz de crescer dinamicamente conforme novo
 - Ponteiro para ponteiro (`int **`)
 - Alocação dinâmica (`malloc`)
 - Realocação dinâmica (`realloc`)
-- Liberação de memória (`memória`)
+- Liberação de memória (`free`)
 - Modularização de código
 - Tratamento de erros
 - Entrada e saída padrão (`scanf` e `getchar`)
@@ -44,18 +49,18 @@ O código foi dividido em funções responsáveis por tarefas específicas:
 
 ### Tempo
 
-- Inserção: **O(1) amortizado**
-- Inserção com realocação: **O(n)**
-- Impressão: **O(n)**
+- Inserção sem realocação: **O(1)**
+- Inserção com realocação: **O(1)** ou **O(n)**
+- Inserção amortizada: **O(1)**
+- Impressão dos elementos: **O(n)**
 - Soma dos elementos: **O(n)**
-
-Apesar das realocações custarem O(n), o crescimento exponencial faz com que o custo médio de inserção permaneça O(1) amortizado.
+- Leitura da entrada: **O(n)**
 
 ### Espaço
 
-O vetor utiliza memória proporcional à quantidade de elementos armazenados.
-
 - Complexidade espacial: **O(n)**
+
+**Observação**: A análise detalhada das complexidades temporal e espacial encontra-se documentada em um arquivo complementar disponível neste repositório.
 
 ## Aprendizados
 
@@ -63,11 +68,11 @@ Durante o desenvolvimento deste projeto foram praticados diversos conceitos impo
 
 - utilização segura de `realloc`;
 - atualização da capacidade apenas após o sucesso da realocação;
-- tratamento de `EOF`;
+- uso de ponteiro para ponteiro para modificar o endereço do vetor dentro de uma função;
+- tratamento de entradas inválidas e de `EOF`;
 - limpeza do buffer de entrada após erros de leitura;
 - separação de responsabilidades em funções;
-- uso de ponteiro para ponteiro para modificar o endereço do vetor dentro de uma função;
-- análise de complexidade temporal e espacial;
+- análise de complexidade temporal e espacial.
 
 ## Autor
 
